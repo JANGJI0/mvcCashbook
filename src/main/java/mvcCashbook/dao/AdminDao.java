@@ -24,7 +24,7 @@ public class AdminDao {
 		String sql = "SELECT admin_id adminId, admin_pw adminPw FROM admin WHERE admin_id = ? AND admin_pw = ?";
 		stmt = conn.prepareStatement(sql);
 		stmt.setString(1, "admin"); // 아이디는 admin으로 고정값으로 넘기기위해
-		stmt.setString(2, "adminPw");
+		stmt.setString(2, adminPw);
 		
 		rs = stmt.executeQuery();
 		
